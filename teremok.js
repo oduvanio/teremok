@@ -12,7 +12,7 @@ window.Teremok = {
 				}
 			});
 
-			div.find('.image').css({opacity: 0.0, 'background-image':'url("image1.jpg")'});
+			div.find('.image').css({opacity: 0.0, 'background-image':'url("images/image1.jpg")'});
 			div.find('.image:first').css({opacity: 1.0}).addClass('show').addClass('scale');
 			div.find('.image:first').addClass('scale');
 			
