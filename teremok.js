@@ -4,7 +4,7 @@ window.Teremok = {
 
 			var div = $('.teremok');
 			
-			var images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+			var images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg'];
 
 			div.each(function(){
 				for (var i = 0, l = images.length; i < l; i++) {
