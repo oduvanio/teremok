@@ -2,15 +2,18 @@
 <html>
 <head>
 	<title>animation image</title>
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+
+	<script src="teremok.js"></script>
 	<style>
-		div#rotator {
+		.teremok {
 			position: relative; 
 			width: 100%; 
 			height:500px;
-			overflow: hidden;}
-		div.image {
+			overflow: hidden;
+		}
+		.teremok div.image {
 			width: 100%;
 			height: 500px;
 			position: absolute;
@@ -19,42 +22,18 @@
 			-o-transition: transform 6s ease-out;
 			-webkit-transition: transform 6s ease-out;
 		}
-		.scale {
+		.teremok .scale {
 			-webkit-transform: scale(1.3);
 			-moz-transform: scale(1.3);
 			-o-transform: scale(1.3);
 		}
 	</style>
-	<script>
-	function theAnimateImage() {
-		$('.image').css({opacity: 0.0, 'background-image':'url("image1.jpg")'});
-		$('.image:first').css({opacity: 1.0}).addClass('show').addClass('scale');
-		$('.image:first').addClass('scale');
-		var images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
-		var i = 1;
-		setInterval(function(){
-			var current = ($('.image.show')?  $('.image.show') : $('.image:first'));
-			var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('.image:first') :current.next()) : $('.image:first'));	
-			if (i >= images.length) {
-				i=0;
-			}
-			next.css({opacity: 0.0, 'background-image':'url(' + images[i++] +')'})
-			.addClass('show').toggleClass('scale')
-			.animate({opacity: 1.0}, 3000);
-			current.animate({opacity: 0.0}, 1000)
-			.removeClass('show');
-		}, 5000);
-	}
-	$(document).ready(function() {		
-		theAnimateImage();
-	});
-	</script>
+	
 </head>
 <body>
-	<div id="rotator">
-	  <div class="image"></div>
-	  <div class="image"></div>
-	  <div class="image"></div>
-	</div>
+	<div class="teremok"></div>
+	<script>
+		Teremok.init();
+	</script>
 </body>
 </html>
