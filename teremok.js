@@ -24,7 +24,7 @@ window.Teremok = {
 					});
 					var height = div.css('height');
 					
-					div.find('.image').css({opacity: 0.0, 'height':height, 'background-image':'url(/vendor/infrajs/imager/?src=/' + images[0] + ')'});
+					div.find('.image').css({opacity: 0.0, 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=1000&src=' + images[0] + ')'});
 					div.find('.image:first').animate({opacity: 1.0}, 3000).addClass('show').toggleClass('scale');
 					
 					var i = 1;
@@ -34,7 +34,7 @@ window.Teremok = {
 						if (i >= images.length) {
 							i=0;
 						}
-						next.css({opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?src=/' + images[i++] +')'})
+						next.css({opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=1000&src=' + images[i++] +')'})
 						.addClass('show').toggleClass('scale')
 						.animate({opacity: 1.0}, 3000);
 						current.animate({opacity: 0.0}, 1000)

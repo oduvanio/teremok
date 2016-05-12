@@ -6,33 +6,12 @@
 
 
 	<script src="teremok.js"></script>
-	<style>
-		.teremok {
-			position: relative; 
-			width: 100%;
-			overflow: hidden;
-		}
-		.teremok div.image {
-			width: 100%;
-			position: absolute;
-			background-size: cover;
-			-moz-transition: transform 6s ease-out;
-			-o-transition: transform 6s ease-out;
-			-webkit-transition: transform 6s ease-out;
-		}
-		.teremok .scale {
-			-webkit-transform: scale(1.3);
-			-moz-transform: scale(1.3);
-			-o-transform: scale(1.3);
-		}
-	</style>
+	<link rel="stylesheet" href="teremok.css" />
 	
 </head>
 <body>
-	<div class="teremok" data-src="~gallery2/" style="height:500px"></div>
-	<br>
-	<br>
-	<div class="teremok" data-src="~gallery/" style="height:500px"></div>
+	<div class="teremok" data-src="-teremok/images/" style="height:400px"></div>
+
 	<script>
 		Teremok.init();
 	</script>
