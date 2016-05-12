@@ -12,9 +12,8 @@ window.Teremok = {
 				}
 			});
 
-			div.find('.image').css({opacity: 0.0, 'background-image':'url("images/image1.jpg")'});
-			div.find('.image:first').css({opacity: 1.0}).addClass('show').addClass('scale');
-			div.find('.image:first').addClass('scale');
+			div.find('.image').css({opacity: 0.0, 'background-image':'url(' + images[0] + ')'});
+			div.find('.image:first').animate({opacity: 1.0}, 3000).addClass('show').toggleClass('scale');
 			
 			var i = 1;
 			setInterval(function(){
