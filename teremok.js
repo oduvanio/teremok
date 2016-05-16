@@ -19,7 +19,7 @@ window.Teremok = {
 
 					div.each(function(){
 						for (var i = 0, l = images.length; i < l; i++) {
-							$(this).append('<div class="image"></div>');
+							$(this).prepend('<div class="image"></div>');
 						}
 					});
 					var height = div.css('height');
