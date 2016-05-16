@@ -1,3 +1,6 @@
 {
+	"js":["teremok.js","infra.js"],
+	"dependencies":["event","controller"],
+	"tester":"tester.php",
 	"count":5
 }

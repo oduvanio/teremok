@@ -28,10 +28,20 @@
 		Teremok.init();
 	</script>
 ```
+## Требования
+- composer
+- php >= 5.4
+- jquery
+
+## Описание работы
+- Достаточно указать путь до папки
+- С серверным кэшем, по умолчанию в корневой папке проекта /cache, создаётся автоматически
+- Автоматическое изменение размера иллюстраций [infrjs/imager](http://github.com/infrajs/imager)
 
 ## Использование с infrajs
 
 ### Поддерживается конфигурация .infra.json
  - count:5 - ограничение на количество картинок в ротации
 
-### Поддерживается загрузка javascript в одном файле [infrjs/collect](http://github.com/infrajs/collect)
+### Поддерживается загрузка javascript в одном файле 
+С помощью [infrjs/collect](http://github.com/infrajs/collect)
