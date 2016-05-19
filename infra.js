@@ -1,4 +1,4 @@
 
-Event.fire('Crumb.onchange', function(){
+Event.handler('Crumb.onchange', function(){
 	Teremok.init();
 });
