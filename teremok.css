@@ -6,12 +6,14 @@
 .teremok div.image {
 	width: 100%;
 	position: absolute;
+	top: 0;
+	z-index: -1;
 	background-size: cover;
 	-moz-transition: transform 6s ease-out;
 	-o-transition: transform 6s ease-out;
 	-webkit-transition: transform 6s ease-out;
 }
-.teremok .scale {
+.teremok div.scale {
 	-webkit-transform: scale(1.3);
 	-moz-transform: scale(1.3);
 	-o-transform: scale(1.3);

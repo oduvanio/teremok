@@ -19,14 +19,14 @@ window.Teremok = {
 
 					div.each(function(){
 						for (var i = 0, l = images.length; i < l; i++) {
-							$(this).prepend('<div class="image"></div>');
+							$(this).append('<div class="image"></div>');
 						}
 					});
 					var height = div.css('height');
 					
 					var image = div.find('.image');
 					image.css({opacity: 0.0, 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=1000&src=' + images[0] + ')'});
-					image.eq(0).animate({opacity: 1.0}, 3000).addClass('show').toggleClass('scale');
+					image.eq(0).animate({opacity: 1.0}, 3000).toggleClass('scale');
 					
 					var i = 1;
 					setInterval(function(){
@@ -34,11 +34,11 @@ window.Teremok = {
 							i=0;
 						}
 						if (i == 0) {
-							image.last().animate({opacity: 0.0}, 1000).removeClass('show');
+							image.last().animate({opacity: 0.0}, 1000);
 						} else {
-							image.eq(i-1).animate({opacity: 0.0}, 1000).removeClass('show');
+							image.eq(i-1).animate({opacity: 0.0}, 1000);
 						}
-						image.eq(i).css({opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=1000&src=' + images[i++] +')'}).addClass('show').toggleClass('scale')
+						image.eq(i).css({opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=1000&src=' + images[i++] +')'}).toggleClass('scale')
 						.animate({opacity: 1.0}, 3000);
 					}, 5000);
 				});
