@@ -2,6 +2,7 @@
 	position: relative; 
 	width: 100%;
 	overflow: hidden;
+	padding: 5px 0;
 }
 .teremok div.image {
 	width: 100%;
@@ -9,9 +10,9 @@
 	top: 0;
 	z-index: -1;
 	background-size: cover;
-	-moz-transition: transform 6s ease-out;
-	-o-transition: transform 6s ease-out;
-	-webkit-transition: transform 6s ease-out;
+	-moz-transition: transform 11s ease-out;
+	-o-transition: transform 11s ease-out;
+	-webkit-transition: transform 11s ease-out;
 }
 .teremok div.scale {
 	-webkit-transform: scale(1.3);

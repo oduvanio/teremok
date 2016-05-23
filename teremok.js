@@ -40,7 +40,7 @@ window.Teremok = {
 						}
 						image.eq(i).css({opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=1000&src=' + images[i++] +')'}).toggleClass('scale')
 						.animate({opacity: 1.0}, 3000);
-					}, 5000);
+					}, 10000);
 				});
 			});
 		});	
