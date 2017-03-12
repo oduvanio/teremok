@@ -31,6 +31,8 @@ window.Teremok = {
 					
 					var i = 1;
 					setInterval(function(){
+						var height = div.css('height');
+						
 						if (i >= images.length) {
 							i=0;
 						}
@@ -39,7 +41,7 @@ window.Teremok = {
 						} else {
 							image.eq(i-1).animate({opacity: 0.0}, 1000);
 						}
-						image.eq(i).css({opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[i++] +')'}).toggleClass('scale')
+						image.eq(i).css({'height':height, opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[i++] +')'}).toggleClass('scale')
 						.animate({opacity: 1.0}, 3000);
 					}, 10000);
 				});
