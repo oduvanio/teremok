@@ -1,7 +1,8 @@
 window.Teremok = {
 	init:function() {
 		$(function(){
-			$('.teremok').each(function(){
+			$('.teremok').not('.teremoked').each( function ( ){
+				$(this).addClass('teremoked');//Защита от двойного срабатывания
 				var div=$(this);
 				var src = div.data('src');
 				var data = {
