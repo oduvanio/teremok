@@ -30,7 +30,7 @@ window.Teremok = {
 					image.eq(0).animate({opacity: 1.0}, 3000).toggleClass('scale');
 					
 					var i = 1;
-					setInterval(function(){
+					var timer = setTimeout(function tick(){
 						var height = div.css('height');
 						
 						if (i >= images.length) {
@@ -43,7 +43,8 @@ window.Teremok = {
 						}
 						image.eq(i).css({'height':height, opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[i++] +')'}).toggleClass('scale')
 						.animate({opacity: 1.0}, 3000);
-					}, 10000);
+						timer = setTimeout(tick, 20000)
+					}, 20000);
 				});
 			});
 		});	
