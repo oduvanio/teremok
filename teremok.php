@@ -24,7 +24,7 @@ $list = Access::cache(__FILE__, function($src){
 		if ($file{0}=='.') return;
 		$fdata = Load::nameInfo($file);
 		if (!in_array($fdata['ext'], array('jpg','jpeg','png'))) return;
-		$list[] = $src.Path::toutf($file);
+		$list[] = ['image' => $src.Path::toutf($file), 'btnhref' => Load::loadJSON($src.$fdata['name'].'.json')];
 	}, scandir($src));
 	return $list;
 }, array($src));
