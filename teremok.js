@@ -21,18 +21,18 @@ window.Teremok = {
 					div.each(function(){
 						for (var i = 0, l = images.length; i < l; i++) {
 							$(this).append('<div class="image"></div>');
-						}
-						if (images[i].btnhref !== null) {
-							$(this).append('<a class="btn ' + images[i].btnhref.styleBtn + ' buttonTeremok" href="' + images[i].btnhref.href + '">' + images[i].btnhref.title + '</a>');	
-						} else {
-							$(this).append('<a class="buttonTeremok" href="">""</a>');
+							if (images[i].btnhref !== null) {
+								$(this).append('<a class="btn ' + images[i].btnhref.styleBtn + ' buttonTeremok" href="' + images[i].btnhref.href + '">' + images[i].btnhref.title + '</a>');	
+							} else {
+								$(this).append('<a class="buttonTeremok" href="">""</a>');
+							}
 						}
 					});
 					var height = div.css('height');
 					
 					var image = div.find('.image');
 					var button = div.find('.buttonTeremok');
-					image.css({opacity: 0.0, 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[0] + ')'});
+					image.css({opacity: 0.0, 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[0].image + ')'});
 					button.css({'display': 'none'});
 					image.eq(0).animate({opacity: 1.0}, 3000).toggleClass('scale');
 					if (image.eq(0).next('.buttonTeremok')[0].innerHTML !== "\"\"") {
@@ -60,7 +60,7 @@ window.Teremok = {
 								image.eq(i).next('.buttonTeremok').css({'display': 'block'}).animate({opacity: 1.0}, 2000);
 							}
 						}
-						image.eq(i).css({'height':height, opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[i++] +')'}).toggleClass('scale')
+						image.eq(i).css({'height':height, opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[i++].image +')'}).toggleClass('scale')
 						.animate({opacity: 1.0}, 3000);
 						timer = setTimeout(tick, 20000)
 					}, 20000);
