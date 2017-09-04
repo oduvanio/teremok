@@ -63,7 +63,7 @@ window.Teremok = {
 		}
 		image.eq(Teremok.count).css( { 'height':height, opacity: 0.0, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[Teremok.count++].image +')' } ).toggleClass( 'scale' )
 		.animate( { opacity: 1.0 }, 3000 );
-		Teremok.timerTeremok = setTimeout( Teremok.tick, 5000 );
+		Teremok.timerTeremok = setTimeout( Teremok.tick, 20000 );
 
 	}
 }
