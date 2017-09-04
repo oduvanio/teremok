@@ -56,7 +56,6 @@ window.Teremok = {
 		}
 		if ( images[Teremok.count].btnhref !== null ) {
 			if (button[0] != undefined) {
-				console.log(images[Teremok.count].btnhref.title);
 				button[0].innerHTML = images[Teremok.count].btnhref.title;
 				button[0].href = images[Teremok.count].btnhref.href;
 				button.css( { 'display': 'block' } ).animate( { opacity: 1.0 }, 2000 );
