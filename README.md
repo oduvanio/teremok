@@ -43,6 +43,7 @@
 
 ### Поддерживается конфигурация .infra.json
  - count:5 - ограничение на количество картинок в ротации
+ - indicators: true - индикаторы для смены картинок
 
 ### Поддерживается загрузка javascript в одном файле 
 С помощью [infrjs/collect](http://github.com/infrajs/collect)
