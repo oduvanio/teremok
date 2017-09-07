@@ -34,6 +34,11 @@ $list = Access::cache(__FILE__, function($src){
 $conf = Config::get('teremok');
 $count = $conf['count'];
 
+if ($conf['indicators']) {
+	$ans['indicators'] = true;
+} else {
+	$ans['indicators'] = false;
+}
 
 $count = Ans::GET('count','int', $count);
 
