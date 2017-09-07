@@ -28,3 +28,27 @@
 	bottom: 15px;
 	width: 150px;
 }
+.teremokIndicators {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+}
+.teremokIndicator {
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 30px;
+    height: 3px;
+    background: rgba(128, 128, 128, 0.6);
+}
+.teremokIndicator.active {
+    background: rgba(255, 255, 255, 0.6);
+}
+.teremokIndicator:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
