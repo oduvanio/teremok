@@ -3,5 +3,6 @@
 	"css":"teremok.css",
 	"dependencies":["event","controller"],
 	"tester":"tester.php",
-	"count":5
+	"count":5,
+	"indicators":false
 }
