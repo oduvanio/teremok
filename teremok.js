@@ -30,7 +30,7 @@ window.Teremok = {
 							$( this ).append( '<div class="teremokIndicators"></div>' );
 						}
 						for ( var i = 0, l = images.length; i < l; i++ ) {
-							$( this ).append( '<div class="image"></div>' );
+							$( this ).append( '<div class="image" style="opacity: 0;"></div>' );
 							if(ans.indicators) {
 								$( '.teremokIndicators' ).append('<a class="teremokIndicator" href="'+ i + '" id="teremokIndicator' + i + '"></a>');
 								document.getElementById('teremokIndicator' + i).onclick = function() {
