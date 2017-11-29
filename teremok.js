@@ -52,7 +52,6 @@ window.Teremok = {
 		var images = JSON.parse(localStorage.getItem('Teremok'));
 		var div = $( '.teremok' );
 		var image = div.find( '.image' );
-		image.animate( { opacity: 0.0 }, 1000 ).stop(false, true);
 		var teremokIndicator = div.find('.teremokIndicator');
 		teremokIndicator.removeClass('active');
 		var button = div.find( '.buttonTeremok' );
@@ -70,8 +69,7 @@ window.Teremok = {
 			}
 		}
 		teremokIndicator.eq(Teremok.count).addClass('active');
-		image.eq(Teremok.count).css( { 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[Teremok.count++].image +')' } ).toggleClass( 'scale' )
-		.animate( { opacity: 1.0 }, 3000 ).stop(false, true);
+		image.eq(Teremok.count).css( { 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[Teremok.count++].image +')' } ).toggleClass( 'scale' );
 		clearTimeout(Teremok.timerTeremok);
 		Teremok.timerTeremok = setTimeout( Teremok.tick, 20000 );
 	}
