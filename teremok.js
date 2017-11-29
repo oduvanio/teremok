@@ -52,7 +52,7 @@ window.Teremok = {
 		var images = JSON.parse(localStorage.getItem('Teremok'));
 		var div = $( '.teremok' );
 		var image = div.find( '.image' );
-		image.animate( { opacity: 0.0 }, 1000 );
+		image.animate( { opacity: 0.0 }, 1000 ).stop(false, true);
 		var teremokIndicator = div.find('.teremokIndicator');
 		teremokIndicator.removeClass('active');
 		var button = div.find( '.buttonTeremok' );
