@@ -66,14 +66,13 @@ window.Teremok = {
 			if (button[0] != undefined) {
 				button[0].innerHTML = images[Teremok.count].btnhref.title;
 				button[0].href = images[Teremok.count].btnhref.href;
-				button.css( { 'display': 'block' } ).animate( { opacity: 1.0 }, 2000 );
+				button.css( { 'display': 'block' } ).animate( { opacity: 1.0 }, 2000 ).stop(false, true);
 			}
 		}
 		teremokIndicator.eq(Teremok.count).addClass('active');
 		image.eq(Teremok.count).css( { 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[Teremok.count++].image +')' } ).toggleClass( 'scale' )
-		.animate( { opacity: 1.0 }, 3000 );
+		.animate( { opacity: 1.0 }, 3000 ).stop(false, true);
 		clearTimeout(Teremok.timerTeremok);
-		image.eq(Teremok.count).css( { 'background-image':'' });
 		Teremok.timerTeremok = setTimeout( Teremok.tick, 20000 );
 	}
 }
