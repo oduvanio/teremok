@@ -9,9 +9,9 @@
 	top: 0;
 	z-index: -1;
 	background-size: cover;
-	-moz-transition: transform 21s ease-out;
-	-o-transition: transform 21s ease-out;
-	-webkit-transition: transform 21s ease-out;
+	-moz-transition: transform 20s ease-out;
+	-o-transition: transform 20s ease-out;
+	-webkit-transition: transform 20s ease-out;
 }
 .teremok div.scale {
 	-webkit-transform: scale(1.3);
