@@ -65,7 +65,7 @@ window.Teremok = {
 			if (button[0] != undefined) {
 				button[0].innerHTML = images[Teremok.count].btnhref.title;
 				button[0].href = images[Teremok.count].btnhref.href;
-				button.css( { 'display': 'block' } ).animate( { opacity: 1.0 }, 2000 ).stop(false, true);
+				button.css( { 'display': 'block' } ).animate( { opacity: 1.0 }, 2000 );
 			}
 		}
 		teremokIndicator.eq(Teremok.count).addClass('active');
