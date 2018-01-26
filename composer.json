@@ -2,7 +2,6 @@
 	"name": "oduvanio/teremok",
 	"description":"Анимированный background",
 	"homepage":"https://github.com/oduvanio/teremok",
-	"license": "GPL3",
 	"require": {
 		"infrajs/router":"~1",
 		"infrajs/ans":"~1",
