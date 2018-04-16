@@ -30,7 +30,7 @@ window.Teremok = {
 							$( this ).append( '<div class="teremokIndicators"></div>' );
 						}
 						for ( var i = 0, l = images.length; i < l; i++ ) {
-							$( this ).append( '<div class="image" style="opacity: 0;"></div>' );
+							$( this ).append( '<div class="image" id="imageTeremok' + i + '" style="background-image:url(/vendor/infrajs/imager/?w=2500&src=' + images[i].image +')"></div>' );
 							if(ans.indicators) {
 								$( '.teremokIndicators' ).append('<a class="teremokIndicator" href="'+ i + '" id="teremokIndicator' + i + '"></a>');
 								document.getElementById('teremokIndicator' + i).onclick = function() {
@@ -51,7 +51,6 @@ window.Teremok = {
 	tick: function() {
 		var images = JSON.parse(localStorage.getItem('Teremok'));
 		var div = $( '.teremok' );
-		var image = div.find( '.image' ).css( { 'visibility': 'hidden' });
 		var teremokIndicator = div.find('.teremokIndicator');
 		teremokIndicator.removeClass('active');
 		var button = div.find( '.buttonTeremok' );
@@ -61,16 +60,20 @@ window.Teremok = {
 		if (Teremok.count >= images.length) {
 			Teremok.count = 0;
 		}
+		teremokIndicator.eq(Teremok.count).addClass('active');
+		$('#imageTeremok' + Teremok.count).css( { 'height':height } ).appendTo(div).animate( { opacity: 1.0 }, 2000 ).toggleClass( 'scale' );
+		console.log(images[Teremok.count].btnhref);
 		if ( images[Teremok.count].btnhref !== null ) {
 			if (button[0] != undefined) {
 				button[0].innerHTML = images[Teremok.count].btnhref.title;
 				button[0].href = images[Teremok.count].btnhref.href;
 				button.css( { 'display': 'block' } ).animate( { opacity: 1.0 }, 2000 );
+				console.log('111');
 			}
 		}
-		teremokIndicator.eq(Teremok.count).addClass('active');
-		image.eq(Teremok.count).css( { 'visibility': 'visible', 'height':height, 'background-image':'url(/vendor/infrajs/imager/?w=2500&src=' + images[Teremok.count++].image +')' } ).toggleClass( 'scale' );
+		Teremok.count++;
 		clearTimeout(Teremok.timerTeremok);
 		Teremok.timerTeremok = setTimeout( Teremok.tick, 20000 );
 	}
 }
+
