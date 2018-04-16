@@ -1,33 +1,29 @@
 @keyframes opacityScale {
 	from {opacity: 0;}
 	20% {opacity: 1;}
-	80% {opacity: 1;}
-	to {opacity: 0;}
 }
 @keyframes opacityImage {
 	from {opacity: 0;}
 	20% {opacity: 1;}
-	80% {opacity: 1;}
-	to {opacity: 0;}
 }
 .teremok {
 	position: relative; 
 	width: 100%;
 	overflow: hidden;
 }
-.teremok div.image {
+.teremok .image {
 	width: 100%;
 	position: absolute;
 	top: 0;
 	z-index: -1;
 	background-size: cover;
-	animation: opacityImage 20s ease-in-out;
-	-moz-transition: transform 20s ease-out;
-	-o-transition: transform 20s ease-out;
-	-webkit-transition: transform 20s ease-out;
+	animation: opacityImage 22s ease-in-out;
+	-moz-transition: transform 22s ease-out;
+	-o-transition: transform 22s ease-out;
+	-webkit-transition: transform 22s ease-out;
 }
-.teremok div.scale {
-	animation: opacityScale 20s ease-in-out;
+.teremok .scale {
+	animation: opacityScale 22s ease-in-out;
 	-webkit-transform: scale(1.3);
 	-moz-transform: scale(1.3);
 	-o-transform: scale(1.3);
