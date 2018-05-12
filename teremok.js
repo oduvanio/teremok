@@ -62,7 +62,7 @@ window.Teremok = {
 		}
 		teremokIndicator.eq(Teremok.count).addClass('active');
 		$('#imageTeremok' + Teremok.count).css( { 'height':height } ).appendTo(div).animate( { opacity: 1.0 }, 2000 ).toggleClass( 'scale' );
-		console.log(images[Teremok.count].btnhref);
+		//console.log(images[Teremok.count].btnhref);
 		if ( images[Teremok.count].btnhref !== null ) {
 			if (button[0] != undefined) {
 				button[0].innerHTML = images[Teremok.count].btnhref.title;
